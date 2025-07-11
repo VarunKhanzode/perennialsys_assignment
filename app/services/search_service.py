@@ -36,7 +36,12 @@ def search_employees(status, search_key, department, location, position, page, p
                 row[col] = getattr(emp, col, None)
             response.append(row)
 
+        if not response:
+            raise HTTPException(status_code=404, detail="Data not found")
         return response
+    
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(e)
         raise HTTPException(status_code=500, detail="Something went wrong")
