@@ -1,10 +1,9 @@
-from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from sqlalchemy import or_
 from app.models.models import Employee, OrganizationConfig
 from app.core.logger import logger
 
-def search_employees(status, search_key, department, location, position, page, page_size, org_id, db: Session):
+def get_employees(status, search_key, department, location, position, page, page_size, org_id, db):
     try:
         query = db.query(Employee).filter(Employee.organization_id == org_id)
 
