@@ -1,0 +1,45 @@
+# Employee Search API
+
+## Features
+- Dynamic columns per organization
+- Search and filtering
+- Custom rate limiting
+
+## Quick Start
+
+## Prerequisites
+
+- Python 3.9+
+
+---
+
+## Running Locally
+
+# Clone the repo and navigate to the directory:
+
+- git clone <repo-url>
+- cd employee_search
+
+# Create and activate a virtual environment:
+
+- python3 -m venv venv
+- source venv/bin/activate
+
+# Install dependencies:
+
+- pip install -r requirements.txt
+
+# Run the application:
+
+- uvicorn main:app --reload
+
+# Load sample data :
+
+curl -X POST http://localhost:8000/load-sample-data
+
+# Visit API docs:
+
+# Swagger UI: http://localhost:8000/docs
+
+# ReDoc: http://localhost:8000/redoc
+
