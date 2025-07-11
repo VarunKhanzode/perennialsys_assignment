@@ -17,8 +17,8 @@
 
 # Clone the repo and navigate to the directory:
 
-- git clone <repo-url>
-- cd employee_search
+- git clone https://github.com/VarunKhanzode/perennialsys_assignment.git
+- cd perennialsys_assignment
 
 # Create and activate a virtual environment:
 
